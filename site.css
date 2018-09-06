@@ -1,0 +1,942 @@
+/*
+FONTS
+font-family: 'Special Elite', cursive;
+font-family: 'EB Garamond', serif;
+font-family: 'Source Sans Pro', sans-serif;
+*/
+
+/*
+COLOR PALLETTE
+primary-blue: #4B7EBF
+secondary-grey: #64687F
+tersh-greyteal: #5A8A9B
+quad-blue/green: #005685
+quat-red: #FF6762
+*/
+
+body {
+  background-color: #fefefe;
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0px auto;
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px auto 80px;
+  grid-template-areas: "n n n n n n n n n n n n" "c c c c c c c c c c c c" "f f f f f f f f f f f f";
+}
+
+.color-grad {
+  background: #dd2b17;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #dd2b17 0%, #b60505 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #dd2b17 0%, #b60505 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #dd2b17 0%, #b60505 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd2b17', endColorstr='#b60505', GradientType=0);
+  /* IE6-9 */
+}
+
+.navbar {
+  grid-area: n;
+  display: flex;
+}
+
+.name {
+  margin-top: 20px;
+}
+
+.navbar .name i {
+  height: 20px;
+  font-weight: bold;
+  font-size: 2em;
+  padding-left: 10px;
+  width: auto;
+  border-radius: 5px;
+}
+
+#a {
+  color: #00aced;
+  margin-left: 10px;
+}
+
+#b {
+  color: #0077b5
+}
+
+#c {
+  color: #000000
+}
+
+#d {
+  color: #e51937
+}
+
+#a:hover, #b:hover, #c:hover, #d:hover {
+  color: #595959;
+}
+
+.menu {
+  margin: 10px 15px 10px auto;
+  color: #bbbbbb;
+}
+
+#menu-content {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 25px;
+  transition: 0.2s linear;
+  padding: 5px 0 0 20px;
+  margin: 0;
+}
+
+#menu-content a {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}
+
+#menu-content a:hover {
+  transition: 0.2s linear;
+  color: #777777;
+}
+
+.content {
+  grid-area: c;
+  margin-top: 8em;
+}
+
+.seperator-1 {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #fefefe;
+}
+
+.seperator-1:after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dd2b17+0,b60505+100;Red+3D */
+  background: #dd2b17;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #dd2b17 0%, #b60505 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #dd2b17 0%, #b60505 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #dd2b17 0%, #b60505 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd2b17', endColorstr='#b60505', GradientType=0);
+  /* IE6-9 */
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  transform-origin: top right;
+  transform: skewY(-1deg);
+}
+
+.top {
+  font-family: 'EB Garamond', serif;
+  margin: 0 0 12em 5em;
+}
+
+.first-line {
+  font-size: 60px;
+}
+
+.second-line {
+  font-size: 75px;
+}
+
+.about {
+  grid-column: 4 / -1;
+  display: flex;
+}
+
+.seperator-2 {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #fefefe;
+}
+
+.seperator-2:after {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dd2b17+0,b60505+100;Red+3D */
+  background: #dd2b17;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #dd2b17 0%, #b60505 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #dd2b17 0%, #b60505 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #dd2b17 0%, #b60505 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd2b17', endColorstr='#b60505', GradientType=0);
+  /* IE6-9 */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform-origin: top right;
+  transform: skewY(2deg);
+}
+
+.about img {
+  height: 300px;
+  width: auto;
+  justify-content: flex-end;
+  align-self: center;
+  margin: 0 4em 0 1em;
+  border: 1px solid rgb(0, 64, 25);
+}
+
+.about p {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #eeeeee;
+  width: 650px;
+  height: auto;
+  align-self: center;
+  font-size: 1.3em;
+  line-height: 1.6em;
+  margin-left: auto;
+  padding: 0 20px 10px 0;
+}
+
+.about span {
+  font-size: 1.5em;
+}
+
+.porfolio {
+  background-color: #fefefe;
+  padding: 20px;
+  height: auto;
+  width: auto;
+}
+
+#work {
+  font-family: 'EB Garamond', serif;
+  font-size: 14em;
+  color: rgb(170, 170, 170);
+  text-shadow: 1px 1px rgb(221, 221, 221);
+  margin: 0;
+  padding-top: 0;
+}
+
+.squares-container {
+  perspective: 1000px;
+  margin: 10px 0;
+}
+
+.squares-container .squares {
+  transform-origin: 100% 250px;
+}
+
+.squares-container:hover .squares, .squares-container.hover .squares {
+  transform: rotateX(180deg);
+}
+
+.squares {
+  transition: 0.9s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.squares-container, .free-front, .free-back, .teach-front, .teach-back, .res-front, .res-back, .boot-front, .boot-back {
+  width: 100%;
+  height: 500px;
+}
+
+.free-front, .free-back, .teach-front, .teach-back, .res-front, .res-back, .boot-front, .boot-back {
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.free-front {
+  background: linear-gradient( rgba(48, 144, 89, 0.85), rgba(48, 144, 89, 0.85)), url("img/ginmill.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 4.5em;
+  color: #dddddd;
+  z-index: 2;
+  /* for firefox 31 */
+}
+
+.free-back {
+  background: linear-gradient( rgba(48, 144, 89, 0.96), rgba(48, 144, 89, 0.96)), url("img/ginmill.png");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  transform: rotateX(180deg);
+}
+
+.free-back h2 {
+  font-size: 4em;
+  color: rgba(221, 221, 221, 0.50);
+  margin: 10px 0 0 20px;
+}
+
+.free-back p {
+  font-size: 1.9em;
+  color: #eeeeee;
+  margin: 10px 25px;
+}
+
+.free-back li {
+  list-style: none;
+  font-size: 1.6em;
+  color: #eeeeee;
+  margin: 5px 15px;
+}
+
+.teach-front {
+  background: linear-gradient( rgba(245, 160, 16, 0.85), rgba(245, 160, 16, 0.85)), url("img/tts.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 4.5em;
+  color: #dddddd;
+  z-index: 2;
+  /* for firefox 31 */
+}
+
+.teach-back {
+  background: linear-gradient( rgba(245, 160, 16, 0.95), rgba(245, 160, 16, 0.95)), url("img/tts.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  transform: rotateX(180deg);
+}
+
+.teach-back h2 {
+  font-size: 4em;
+  color: rgba(221, 221, 221, 0.50);
+  margin: 10px 0 0 20px;
+}
+
+.teach-back p {
+  font-size: 1.9em;
+  color: #eeeeee;
+  margin: 10px 25px;
+}
+
+.tts {
+  padding-top: 30px;
+}
+
+.tts a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-style: italic;
+}
+
+.res-front {
+  background: linear-gradient( rgba(214, 16, 16, 0.65), rgba(214, 16, 16, 0.65)), url("img/coding.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 4.5em;
+  color: #dddddd;
+  z-index: 2;
+  /* for firefox 31 */
+}
+
+.res-back {
+  background: linear-gradient( rgba(214, 16, 16, 0.95), rgba(214, 16, 16, 0.95)), url("img/coding.jpeg");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  transform: rotateX(180deg);
+  overflow: scroll;
+}
+
+.res-back h2 {
+  font-size: 4em;
+  color: rgba(221, 221, 221, 0.50);
+  margin: 10px 0 0 20px;
+}
+
+.res-back p {
+  color: rgba(238, 238, 238, 0.7);
+  font-size: 1em;
+  margin: 0 3em;
+}
+
+.res-back img {
+  width: 90vw;
+  height: auto;
+  padding: 20px;
+}
+
+.boot-front {
+  background: linear-gradient( rgba(16, 155, 214, 0.65), rgba(16, 155, 214, 0.65)), url("img/brew.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 4.5em;
+  color: #dddddd;
+  z-index: 2;
+  /* for firefox 31 */
+}
+
+.boot-back {
+  background: linear-gradient( rgba(16, 155, 214, 0.95), rgba(16, 155, 214, 0.95)), url("img/brew.png");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  transform: rotateX(180deg);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.boot-back h2 {
+  font-size: 4em;
+  color: rgba(221, 221, 221, 0.50);
+  margin: 10px 0 0 20px;
+}
+
+.boot-back p {
+  font-size: 1.7em;
+  color: #eeeeee;
+  margin: 10px 25px;
+  grid-column: span 3;
+}
+
+.left-list {
+  grid-column-start: 1;
+}
+
+.center-list {
+  grid-column-start: 2;
+}
+
+.right-list {
+  grid-column-start: 3;
+}
+
+.boot-back li {
+  list-style: none;
+  color: #eeeeee;
+  margin: 2px 15px;
+  font-size: 1.3em;
+}
+
+footer {
+  grid-area: f;
+  margin-bottom: 0;
+  height: 300px;
+  width: 100%;
+  background-color: #3c3c3c;
+  display: flex;
+}
+
+.contact h1 {
+  font-size: 5em;
+  font-family: 'Special Elite', cursive;
+  margin: 25px 0 10px 30px;
+  color: rgb(84, 84, 84);
+}
+
+.contact h3 {
+  width: 480px;
+  font-size: 1.2em;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 10px 0 0 85px;
+  color: rgb(162, 162, 162);
+}
+
+.contact a {
+  font-size: 1em;
+  margin-left: 5px;
+  color: rgb(194, 194, 194);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: rgb(90, 157, 227);
+}
+
+.social {
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 5em;
+  padding-top: 5em;
+}
+
+.social i {
+  padding: 10px;
+  color: rgb(217, 217, 217);
+}
+
+.fa-3x {
+  display: none;
+}
+
+.social-mobile {
+  display: none;
+}
+
+#tw:hover {
+  color: #00aced
+}
+
+#lk:hover {
+  color: #0077b5
+}
+
+#git:hover {
+  color: #000000
+}
+
+#mtup:hover {
+  color: #e51937
+}
+
+/* ********MEDIA QUERIES******** */
+
+@media screen and (max-width: 1024px) {
+  .about p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  .free-back p {
+    font-size: 1.6em;
+  }
+  .teach-back p {
+    font-size: 1.6em;
+  }
+  .boot-back p {
+    font-size: 1.5em;
+  }
+  .boot-back li {
+    font-size: 1.2em;
+  }
+  .contact h3 {
+    width: 420px;
+    font-size: 1.2em;
+    margin: 10px 0 0 55px;
+  }
+  .social-mobile {
+    display: none;
+  }
+
+  .fa-5x {
+    display: none;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .content {
+    margin-top: 7em;
+  }
+  .top {
+    margin: 0 0 10em 3em;
+  }
+  .first-line {
+    font-size: 50px;
+  }
+  .second-line {
+    font-size: 56px;
+  }
+  #profile-pic {
+    height: 300px;
+    width: auto;
+    margin-right: 1.5em;
+  }
+  .about p {
+    width: 420px;
+    height: auto;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .about span {
+    font-size: 1.4em;
+  }
+  #work {
+    font-size: 10em
+  }
+  .contact h3 {
+    width: 420px;
+    font-size: 1em;
+    margin: 10px 0 0 35px;
+  }
+  .boot-back p {
+    font-size: 1.5em;
+  }
+  .boot-back li {
+    font-size: 1em;
+  }
+  .social {
+    display: none;
+  }
+
+  .fa-5x {
+    display: none;
+  }
+
+  .social-mobile {
+    display: block;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 2em;
+    padding-top: 6em;
+  }
+  .social-mobile i {
+    padding: 10px;
+    color: rgb(217, 217, 217);
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+
+  .name {
+    margin-top: 5px;
+  }
+
+  #a {
+    margin: 0;
+  }
+
+  .navbar .name i {
+    height: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    padding-left: 5px;
+    width: auto;
+    border-radius: 5px;
+  }
+
+  .menu {
+    margin: 5px 7.5px 5px auto;
+  }
+
+  #menu-content {
+    display: none;
+  }
+
+  .content {
+    margin-top: 4em;
+  }
+
+  .top {
+    margin: 0 0 5em 2em;
+  }
+
+  .first-line {
+    font-size: 30px;
+  }
+
+  .second-line {
+    font-size: 35px;
+  }
+
+  #profile-pic {
+    display: none;
+  }
+
+  .about p {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #eeeeee;
+    width: auto;
+    height: auto;
+    align-self: center;
+    font-size: 13px;
+    padding: 0 20px;
+  }
+
+  .about span {
+    font-size: 1.5em;
+  }
+
+  .seperator-1 {
+    height: 60px;
+  }
+
+  .seperator-2 {
+    height: 60px;
+  }
+
+  .porfolio {
+    padding: 0;
+    height: auto;
+    width: auto;
+  }
+
+  #work {
+    font-size: 4em;
+    margin: 0;
+    padding: 0 0 0 10px;
+  }
+
+  .squares-container {
+    perspective: 1000px;
+    margin: 5px 0;
+  }
+
+  .squares-container .squares {
+    transform-origin: 100% 125px;
+  }
+
+  .squares-container:hover .squares, .squares-container.hover .squares {
+    transform: rotateX(180deg);
+  }
+
+  .squares {
+    transition: 0.9s ease-in-out;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .squares-container, .free-front, .free-back, .teach-front, .teach-back, .res-front, .res-back, .boot-front, .boot-back {
+    width: 100%;
+    height: 250px;
+    overflow: scroll;
+  }
+
+  .free-front, .free-back, .teach-front, .teach-back, .res-front, .res-back, .boot-front, .boot-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+  }
+
+  .free-front {
+    background: linear-gradient( rgba(48, 144, 89, 0.85), rgba(48, 144, 89, 0.85)), url("img/ginmill.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em;
+    color: #dddddd;
+    z-index: 2;
+    /* for firefox 31 */
+  }
+
+  .free-back {
+    background: linear-gradient( rgba(48, 144, 89, 0.96), rgba(48, 144, 89, 0.96)), url("img/ginmill.png");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    transform: rotateX(180deg);
+  }
+
+  .free-back h2 {
+    font-size: 2em;
+    color: rgba(221, 221, 221, 0.50);
+    margin: 10px 0 0 20px;
+  }
+
+  .free-back p {
+    font-size: 1em;
+    color: #eeeeee;
+    margin: 10px 25px;
+  }
+
+  .free-back li {
+    list-style: none;
+    font-size: 1em;
+    color: #eeeeee;
+    margin: 5px 15px;
+  }
+
+  .teach-front {
+    background: linear-gradient( rgba(245, 160, 16, 0.85), rgba(245, 160, 16, 0.85)), url("img/tts.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em;
+    color: #dddddd;
+    z-index: 2;
+    /* for firefox 31 */
+  }
+
+  .teach-back {
+    background: linear-gradient( rgba(245, 160, 16, 0.95), rgba(245, 160, 16, 0.95)), url("img/tts.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    transform: rotateX(180deg);
+  }
+
+  .teach-back h2 {
+    font-size: 2em;
+    color: rgba(221, 221, 221, 0.50);
+    margin: 10px 0 0 20px;
+  }
+
+  .teach-back p {
+    font-size: 1em;
+    color: #eeeeee;
+    margin: 10px 25px;
+  }
+
+  .tts {
+    padding-top: 30px;
+  }
+
+  .tts a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+  }
+
+  .res-front {
+    background: linear-gradient( rgba(214, 16, 16, 0.65), rgba(214, 16, 16, 0.65)), url("img/coding.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em;
+    color: #dddddd;
+    z-index: 2;
+    /* for firefox 31 */
+  }
+
+  .res-back {
+    background: linear-gradient( rgba(214, 16, 16, 0.95), rgba(214, 16, 16, 0.95)), url("img/coding.jpeg");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    transform: rotateX(180deg);
+    overflow: scroll;
+  }
+
+  .res-back h2 {
+    font-size: 2em;
+    color: rgba(221, 221, 221, 0.50);
+    margin: 10px 0 0 20px;
+  }
+
+  .res-back p {
+    color: rgba(238, 238, 238, 0.7);
+    font-size: 1em;
+    margin: 0 3em;
+  }
+
+  .res-back img {
+    width: 85vw;
+    height: auto;
+    padding: 20px;
+  }
+
+  .boot-front {
+    background: linear-gradient( rgba(16, 155, 214, 0.65), rgba(16, 155, 214, 0.65)), url("img/brew.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em;
+    color: #dddddd;
+    z-index: 2;
+    /* for firefox 31 */
+  }
+
+  .boot-back {
+    background: linear-gradient( rgba(16, 155, 214, 0.95), rgba(16, 155, 214, 0.95)), url("img/brew.png");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    transform: rotateX(180deg);
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .boot-back h2 {
+    font-size: 2em;
+    color: rgba(221, 221, 221, 0.50);
+    margin: 10px 0 0 20px;
+  }
+
+  .boot-back p {
+    font-size: 1em;
+    color: #eeeeee;
+    margin: 10px;
+    grid-column: 1fr;
+  }
+
+  .left-list {
+    grid-column-start: 1;
+  }
+
+  .center-list {
+    grid-column-start: 1;
+  }
+
+  .right-list {
+    grid-column-start: 1;
+  }
+
+  .boot-back li {
+    list-style: none;
+    color: #eeeeee;
+    margin: 5px;
+    font-size: 1em;
+  }
+
+  footer {
+    margin-bottom: 0;
+    height: 300px;
+    width: 100%;
+    display: block;
+  }
+
+  .contact h1 {
+    font-size: 2.5em;
+    margin: 30px 0 10px 10px;
+  }
+
+  .contact h3 {
+    width: auto;
+    font-size: 1em;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .contact a {
+    font-size: 1em;
+    margin-left: 5px;
+  }
+
+  .social {
+    display: none;
+  }
+
+  .social-mobile {
+    display: block;
+    padding: 10px;
+  }
+
+}
